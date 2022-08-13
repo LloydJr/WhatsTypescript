@@ -13,3 +13,12 @@ form.onsubmit = () => {
   console.log(text);
   return false; // prevent reload
 };
+
+function fetchJSON(sord: string) {
+  fetch('https://dictionaryapi.dev' + word)
+  .then(respomse => response.json())
+  .then(data => {
+    console.log(data);
+    localStorage.setItem('definition', JSON.stringify(data))
+  });
+}
