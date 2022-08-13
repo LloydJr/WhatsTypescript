@@ -15,8 +15,8 @@ form.onsubmit = () => {
 };
 
 function fetchJSON(sord: string) {
-  fetch('https://dictionaryapi.dev' + word)
-  .then(respomse => response.json())
+  fetch('https://api.dictionaryapi.dev/api/v2/entries/en/' + Text)
+  .then(response => response.json())
   .then(data => {
     console.log(data);
     localStorage.setItem('definition', JSON.stringify(data))
